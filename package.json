@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env DEBUG=app:* babel-watch src"
+    "start": "cross-env DEBUG=app:*,oidc-provider:* babel-watch src"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
