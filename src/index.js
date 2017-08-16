@@ -5,7 +5,7 @@ const dbg = debug('app:oidc-provider')
 
 const configuration = {
   claims: {
-    openid: ['roles']
+    openid: ['scope']
   },
   async findById(ctx, id) {
     dbg('find-by-id: ctx=%o, id=%o', ctx, id)
@@ -13,10 +13,11 @@ const configuration = {
       accountId: id,
       async claims() {
         dbg('claims')
-        return {roles: 'admin'}
+        return id === 'admin' ? {scope: 'admin'} : {}
       }
     }
-  }
+  },
+  features: {sessionManagement: true}
 }
 
 const clients = [
