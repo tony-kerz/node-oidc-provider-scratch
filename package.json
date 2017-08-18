@@ -12,7 +12,7 @@
     "debug": "^2.6.8",
     "express": "^4.15.3",
     "lodash": "^4.17.4",
-    "oidc-provider": "^2.1.0"
+    "oidc-provider": "git://github.com/tony-kerz/node-oidc-provider.git#tk/relax"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
