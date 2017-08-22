@@ -20,18 +20,21 @@ const configuration = {
   features: {sessionManagement: true}
 }
 
+const redirect_uris = ['http://localhost:8080/']
+
 const clients = [
   {
     application_type: 'web',
     client_id: 'foo',
     client_secret: 'bar',
     // redirect_uris: ['http://lvh.me:8080/'],
-    redirect_uris: ['http://localhost:8080/'],
+    redirect_uris,
     grant_types: ['implicit'],
     // token_endpoint_auth_method: 'none',
     // response_types: ['id_token']
     // hello.js client seems to want 'id_token token'...
-    response_types: ['id_token token']
+    response_types: ['id_token token'],
+    post_logout_redirect_uris: redirect_uris
   }
 ]
 
